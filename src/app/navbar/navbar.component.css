@@ -1,0 +1,28 @@
+.navbar-custom {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+  }
+  
+  .navbar-brand {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #4caf50;
+  }
+  

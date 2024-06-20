@@ -1,0 +1,45 @@
+<div class="currency-converter-container">
+    <h2 class="title">Convert Currency</h2>
+    <div class="converter-row">
+      <div class="converter-column">
+        <!-- Input for decimal value -->
+        <div class="input-group">
+          <label for="amount" class="input-label">Amount:</label>
+          <input type="number" [(ngModel)]="amount" class="input-field" id="amount" placeholder="Enter amount" (ngModelChange)="onAmountChange()">
+        </div>
+  
+        <!-- Input for "from currency" with dropdown -->
+        <div class="input-group">
+          <label for="fromCurrency" class="input-label">From Currency:</label>
+          <select id="fromCurrency" class="dropdown" [(ngModel)]="fromCurrency" (change)="selectFromCurrency($event)" >
+            <option selected>Select a currency</option>
+            <option *ngFor="let currency of currencies" [value]="currency.code">{{ currency.name }}</option>
+          </select>
+        </div>
+  
+        <!-- Input for "to currency" with dropdown -->
+        <div class="input-group">
+          <label for="toCurrency" class="input-label">To Currency:</label>
+          <select id="toCurrency" class="dropdown" [(ngModel)]="toCurrency" (change)="selectToCurrency($event)">
+            <option selected>Select a currency</option>
+            <option *ngFor="let currency of currencies" [value]="currency.code">{{ currency.name }}</option>
+          </select>
+        </div>
+  
+        <!-- Convert button -->
+        <button (click)="convertCurrency()" class="convert-button">Convert</button>
+      </div>
+  
+      <!-- Display converted value -->
+      <div class="result-column">
+        <h3 class="result-title">Converted Amount:</h3>
+        <p class="converted-amount">{{ convertedAmount }}</p>
+        <br>
+        <p *ngIf="isdisplaydescriptionpara" id="para">
+            {{ amount }} {{ fromCurrency }} is {{ convertedAmount }} {{ toCurrency }}.
+          </p>
+      </div>
+    </div>
+    <a href="https://www.exchangerate-api.com">Rates By Exchange Rate API</a>
+  </div>
+  

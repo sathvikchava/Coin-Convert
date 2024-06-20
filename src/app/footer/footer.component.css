@@ -1,0 +1,44 @@
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  .footer h5 {
+    color: #fff;
+  }
+  
+  .footer p {
+    color: #ccc;
+  }
+  
+  .footer-links li, .contact-info li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+  
+  .contact-info {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .contact-info li:before {
+    content: '\2022';
+    color: #ccc;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
